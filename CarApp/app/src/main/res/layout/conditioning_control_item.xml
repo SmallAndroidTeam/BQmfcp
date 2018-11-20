@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/IB_TemperatureUp_Driver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="37dp"
+        android:background="@mipmap/icon_plus" />
+
+    <TextView
+        android:id="@+id/TV_Temperature_Driver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:layout_marginLeft="20dp"
+        android:text="26"
+        android:textSize="35dp"
+        android:textColor="#BFF6FF"/>
+
+    <TextView
+        android:id="@+id/TV_temperature_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="115dp"
+        android:text="℃"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="128dp"
+        android:background="@mipmap/icon_temperature" />
+
+    <ImageButton
+        android:id="@+id/IB_TemperatureDown_Driver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginBottom="111dp"
+        android:background="@mipmap/icon_minus" />
+
+
+    <ImageButton
+        android:id="@+id/IB_WindSpeedUp_Driver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginStart="278dp"
+        android:background="@mipmap/icon_arrow_add" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/TV_temperature_left"
+        android:layout_marginEnd="-278dp"
+        android:layout_toStartOf="@+id/IB_WindSpeedUp_Driver"
+        android:background="@mipmap/icon_wind" />
+
+    <TextView
+        android:id="@+id/TV_Wind_Speed_Driver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/TV_Temperature_Driver"
+        android:layout_marginLeft="285dp"
+        android:text="3"
+        android:textSize="35dp"
+        android:textColor="#BFF6FF"/>
+
+    <ImageButton
+        android:id="@+id/IB_WindSpeedDown_Driver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignStart="@+id/IB_WindSpeedUp_Driver"
+        android:layout_alignTop="@+id/IB_TemperatureDown_Driver"
+        android:background="@mipmap/icon_arrow_lower" />
+
+    <ImageButton
+        android:id="@+id/IB_WindSpeedUp_ViceDriver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginEnd="278dp"
+        android:background="@mipmap/icon_arrow_add" />
+
+    <TextView
+        android:id="@+id/TV_Temperature_ViceDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/TV_Temperature_Driver"
+        android:layout_marginEnd="35dp"
+        android:text="26"
+        android:textSize="35dp"
+        android:textColor="#BFF6FF"/>
+
+    <TextView
+        android:id="@+id/TV_temperature_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/TV_temperature_left"
+        android:layout_marginEnd="21dp"
+        android:text="℃"
+        android:textSize="10dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/IV_temperature_left"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
+        android:background="@mipmap/icon_temperature"/>
+
+    <ImageView
+        android:id="@+id/IV_temperature_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="128dp"
+        android:background="@mipmap/icon_temperature" />
+
+    <ImageButton
+        android:id="@+id/IB_WindSpeedDown_ViceDriver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignStart="@+id/TV_Wind_Speed_ViceDriver"
+        android:layout_alignTop="@+id/IB_TemperatureDown_Driver"
+        android:background="@mipmap/icon_arrow_lower" />
+
+
+    <ImageButton
+        android:id="@+id/IB_TemperatureUp_ViceDriver"
+        android:background="@mipmap/icon_plus"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginEnd="38dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/TV_temperature_left"
+        android:layout_marginEnd="301dp"
+        android:background="@mipmap/icon_wind" />
+
+    <TextView
+        android:id="@+id/TV_Wind_Speed_ViceDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/TV_Temperature_Driver"
+        android:layout_marginEnd="275dp"
+        android:text="3"
+        android:textSize="35dp"
+        android:textColor="#BFF6FF"/>
+
+    <ImageButton
+        android:id="@+id/IB_TemperatureDown_ViceDriver"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignStart="@+id/IB_TemperatureUp_ViceDriver"
+        android:layout_alignTop="@+id/IB_TemperatureDown_Driver"
+        android:background="@mipmap/icon_minus" />
+
+    <ImageView
+        android:id="@+id/TV_Conditioning_Driver"
+        android:layout_width="121dp"
+        android:layout_height="105dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="69dp"
+        android:src="@mipmap/pic_outlet_left" />
+
+    <ImageView
+        android:id="@+id/IV_wind_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginEnd="-278dp"
+        android:layout_toStartOf="@+id/IB_WindSpeedUp_Driver"
+        android:background="@mipmap/pic_wind1_left" />
+
+    <TextView
+        android:id="@+id/TV_AUTO_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="93dp"
+        android:layout_marginStart="123dp"
+        android:text="AUTO"
+        android:textColor="#BFF6FF"
+        android:textSize="30dp" />
+
+    <TextView
+        android:id="@+id/TV_AUTO_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="93dp"
+        android:layout_marginEnd="123dp"
+        android:text="AUTO"
+        android:textColor="#BFF6FF"
+        android:textSize="30dp" />
+
+    <ImageView
+        android:id="@+id/TV_Conditioning_ViceDriver"
+        android:layout_width="121dp"
+        android:layout_height="105dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/TV_Conditioning_Driver"
+        android:layout_marginEnd="98dp"
+        android:background="@mipmap/pic_outlet_right" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginEnd="72dp"
+        android:background="@mipmap/pic_wind1_right" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:background="@mipmap/bg_button"
+        >
+
+        <ImageButton
+            android:id="@+id/IB_AorC"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33dp"
+            android:background="@mipmap/icon_ac_opacity"
+            android:text="A/C"
+            android:textColor="@color/white"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/bg_line_choose_ac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_line_choose"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="47dp"
+            android:layout_marginTop="35dp"/>
+
+        <ImageButton
+            android:id="@+id/IB_OFF"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="241dp"
+            android:background="@mipmap/icon_off_opacity"
+            android:text="OFF"
+            android:textSize="25dp" />
+
+        <ImageButton
+            android:id="@+id/IB_Wind1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="132dp"
+            android:background="@mipmap/icon_wind1_opacity" />
+
+        <ImageButton
+            android:id="@+id/IB_SYNC"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="240dp"
+            android:background="@mipmap/icon_sync_opacity"
+            android:text="SYNC"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:id="@+id/bg_line_choose_sync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/bg_line_choose"
+            android:visibility="invisible"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="253dp"
+            android:layout_marginTop="35dp"/>
+
+        <ImageButton
+            android:id="@+id/IB_InnerLoop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="136dp"
+            android:background="@mipmap/icon_loop_opacity" />
+
+        <ImageButton
+            android:id="@+id/IB_Deforst"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="25dp"
+            android:background="@mipmap/icon_defrost_opacity" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_TemperatureUp_Driver_Line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginStart="22dp"
+        android:background="@mipmap/bg_line_high" />
+
+
+    <ImageView
+        android:id="@+id/btn_WindSpeedUp_ViceDriver_Line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IB_TemperatureUp_Driver"
+        android:layout_marginEnd="22dp"
+        android:background="@mipmap/bg_line_high" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_TemperatureUp_Driver_Line"
+        android:layout_alignTop="@+id/IB_TemperatureDown_Driver"
+        android:background="@mipmap/bg_line_low" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_WindSpeedUp_ViceDriver_Line"
+        android:layout_alignTop="@+id/IB_TemperatureDown_Driver"
+        android:background="@mipmap/bg_line_low" />
+
+</RelativeLayout>
