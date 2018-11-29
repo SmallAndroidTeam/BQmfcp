@@ -1,9 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+
+    <ImageView
+        android:id="@+id/lv_bg_media"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="多媒体控制"/>
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:src="@mipmap/bg_media" />
+
+    <ImageView
+        android:id="@+id/lv_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:src="@mipmap/pic_sound" />
+
+    <ImageButton
+        android:id="@+id/ib_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="72dp"
+        android:background="@mipmap/icon_max" />
+
+    <SeekBar
+        android:id="@+id/sb_sound"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ib_sound"
+        android:layout_toEndOf="@+id/ib_sound" />
+
+    <TextView
+        android:id="@+id/tv_sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ib_sound"
+        android:layout_toEndOf="@+id/sb_sound"
+        android:text="0" />
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_marginLeft="270dp"
+    android:layout_marginBottom="20dp">
+    <com.of.mfcp.bq.DefineView.WheelView
+        android:id="@+id/wv_equalizer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.of.mfcp.bq.DefineView.WheelView>
 </LinearLayout>
+
+
+</RelativeLayout>
