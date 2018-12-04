@@ -12,6 +12,9 @@
         android:id="@+id/LL_ButtonMode"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginLeft="83px"
+        android:layout_marginRight="83px"
+
         >
 
         <ImageView

@@ -8,9 +8,10 @@
         android:layout_height="270px"
         android:layout_above="@+id/pic_seat_l"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="175px"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="128px"
         android:scaleType="fitXY"
-        android:layout_marginBottom="45px"
+        android:layout_marginTop="166px"
         android:background="@mipmap/bg_line_path" />
 
     <ImageView
@@ -19,7 +20,7 @@
         android:layout_height="270px"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/bg_line_path"
-        android:layout_marginEnd="88dp"
+        android:layout_marginEnd="128px"
         android:background="@mipmap/bg_line_path"
         android:rotation="90"
         android:scaleType="fitXY" />
@@ -27,13 +28,13 @@
     <TextView
         android:id="@+id/tv_back_angle"
         android:layout_above="@id/pic_seat_l"
-        android:layout_toRightOf="@+id/icon_minus_choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100px"
-        android:layout_marginBottom="50px"
+        android:layout_marginLeft="226px"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="296px"
         android:textColor="#fff"
-        android:textSize="40px"
+        android:textSize="90px"
         android:text="90"/>
 
     <TextView
@@ -42,36 +43,37 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/tv_back_angle"
-        android:layout_marginEnd="139dp"
+        android:layout_marginEnd="226px"
         android:text="90"
         android:textColor="#fff"
-        android:textSize="40px" />
+        android:textSize="90px" />
 
     <ImageButton
         android:id="@+id/icon_plus_choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="26dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="150px"
         android:layout_toEndOf="@+id/bg_line_path"
-        android:layout_marginLeft="54px"
+        android:layout_marginLeft="384px"
         android:background="@mipmap/icon_plus_choose" />
 
     <ImageButton
         android:id="@+id/icon_plus_choose2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/icon_plus_choose"
-        android:layout_marginEnd="241dp"
+        android:layout_marginLeft="859px"
         android:background="@mipmap/icon_plus_choose" />
 
     <ImageButton
         android:id="@+id/icon_minus_choose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-         android:layout_marginLeft="160px"
-        android:layout_marginTop="393px"
+         android:layout_marginLeft="112px"
+        android:layout_marginTop="428px"
         android:background="@mipmap/icon_minus_choose" />
 
     <ImageButton
@@ -79,8 +81,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/icon_minus_choose"
-        android:layout_marginStart="-98dp"
-        android:layout_toEndOf="@+id/bg_line_path2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1131px"
         android:background="@mipmap/icon_minus_choose" />
 
     <ImageButton
@@ -89,18 +91,18 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginStart="138px"
+        android:layout_marginTop="197px"
         android:background="@mipmap/icon_adjust_l03" />
 
     <ImageButton
         android:id="@+id/icon_adjust_r03"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="80dp"
-        android:layout_marginTop="77dp"
+        android:layout_marginLeft="993px"
+        android:layout_marginTop="181px"
         android:rotation="10"
         android:background="@mipmap/icon_adjust_r03" />
 
@@ -108,17 +110,20 @@
         android:id="@+id/pic_seat_l"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/pic_seat_backrest_l"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="113px"
+        android:layout_marginTop="460px"
         android:src="@mipmap/pic_seat_l" />
 
     <ImageView
         android:id="@+id/pic_seat_r"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/icon_plus_choose2"
-        android:layout_alignTop="@+id/pic_seat_l"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="792px"
+        android:layout_marginTop="460px"
         android:src="@mipmap/pic_seat_r" />
 
     <ImageView
@@ -126,17 +131,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="87dp"
-        android:layout_marginStart="197dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="342px"
+        android:layout_marginTop="182px"
         android:src="@mipmap/pic_seat_backrest_l" />
 
     <ImageView
         android:id="@+id/pic_seat_backrest_r"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/icon_plus_choose2"
-        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="797px"
+        android:layout_marginTop="182px"
         android:src="@mipmap/pic_seat_backrest_r" />
 
 
