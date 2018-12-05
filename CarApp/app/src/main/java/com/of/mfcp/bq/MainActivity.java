@@ -1,201 +1,75 @@
 package com.of.mfcp.bq;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Context;
+import android.content.Intent;
+import android.hardware.display.DisplayManager;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
-import com.of.mfcp.bq.Fragment.ConditioningControlFragment;
-import com.of.mfcp.bq.Fragment.FragranceControlFragment;
-import com.of.mfcp.bq.Fragment.MediaControlFragment;
-import com.of.mfcp.bq.Fragment.MyFragmentPagerAdapter;
-import com.of.mfcp.bq.Fragment.SeatControlFragment;
+import com.of.mfcp.bq.DifferentDislay;
 import com.of.mfcp.bq.R;
 
-import java.util.ArrayList;
-import java.util.List;
+public class MainActivity extends AppCompatActivity {
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private List<Fragment> listFragment;
-    private ImageView IV_conditioning_control;
-    private ImageView IV_seat_control;
-    private ImageView IV_media_control;
-    private ImageView IV_fragrance_control;
-    private ViewPager myViewPager;
-    private MyFragmentPagerAdapter myFragmentPagerAdapter;
-    private Fragment conditioningControlFragment;
-    private Fragment seatControlFragment;
-    private Fragment mediaControlFragment;
-    private Fragment fragranceControlFragment;
-
+    private DifferentDislay mPresentation;
+    public static FragmentManager fragmentManager;
+    Button btnMajorTest;
+    TextView tvMajorTest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //去掉Activity上面的状态栏
-        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN , WindowManager.LayoutParams. FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
-        AddFragment();
+        setContentView(R.layout.activity_main_test);
 
-    }
-    private void AddFragment(){
-        listFragment = new ArrayList<>();
-        conditioningControlFragment = new ConditioningControlFragment();
-        seatControlFragment = new SeatControlFragment();
-        mediaControlFragment = new MediaControlFragment();
-        fragranceControlFragment = new FragranceControlFragment();
-        listFragment.add(conditioningControlFragment);
-        listFragment.add(seatControlFragment);
-        listFragment.add(mediaControlFragment);
-        listFragment.add(fragranceControlFragment);
-        myFragmentPagerAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(),listFragment);
-        initView();
-        ViewClick();
-    }
-    private void initView(){
-        IV_conditioning_control = (ImageView) findViewById(R.id.IV_conditioning_control);
-        IV_seat_control = (ImageView)findViewById(R.id.IV_seat_control);
-        IV_media_control = (ImageView)findViewById(R.id.IV_media_control);
-        IV_fragrance_control = (ImageView)findViewById(R.id.IV_fragrance_control);
+        btnMajorTest = (Button) findViewById(R.id.btn_majortest);
+        tvMajorTest = (TextView) findViewById(R.id.tv_majortest);
+        fragmentManager = getSupportFragmentManager();
 
-        myViewPager = (ViewPager)findViewById(R.id.myViewPager);
-        myViewPager.setAdapter(myFragmentPagerAdapter);
-
-        myViewPager.setCurrentItem(0);
-
-
-    }
-    private void ViewClick(){
-        IV_conditioning_control.setOnClickListener(this);
-        IV_seat_control.setOnClickListener(this);
-        IV_media_control.setOnClickListener(this);
-        IV_fragrance_control.setOnClickListener(this);
-        myViewPager.addOnPageChangeListener(new MyPageChangeListener());
-
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.IV_conditioning_control:
-                IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air_choose));
-                IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat));
-                IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media));
-                IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance));
-
-                IV_conditioning_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                IV_seat_control.setBackground(null);
-                IV_media_control.setBackground(null);
-                IV_fragrance_control.setBackground(null);
-                myViewPager.setCurrentItem(0);
-                break;
-            case  R.id.IV_seat_control:
-                IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air));
-                IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat_choose));
-                IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media));
-                IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance));
-
-                IV_conditioning_control.setBackground(null);
-                IV_seat_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                IV_media_control.setBackground(null);
-                IV_fragrance_control.setBackground(null);
-                myViewPager.setCurrentItem(1);
-                break;
-            case R.id.IV_media_control:
-                IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air));
-                IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat));
-                IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media_choose));
-                IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance));
-
-                IV_conditioning_control.setBackground(null);
-                IV_seat_control.setBackground(null);
-                IV_media_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                IV_fragrance_control.setBackground(null);
-                myViewPager.setCurrentItem(2);
-                break;
-            case R.id.IV_fragrance_control:
-                IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air));
-                IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat));
-                IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media));
-                IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance_choose));
-
-                IV_conditioning_control.setBackground(null);
-                IV_seat_control.setBackground(null);
-                IV_media_control.setBackground(null);
-                IV_fragrance_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                myViewPager.setCurrentItem(3);
-                break;
-
-        }
-    }
-    public class MyPageChangeListener implements ViewPager.OnPageChangeListener {
-        @Override
-        public void onPageSelected(int i) {
-            switch (i){
-                case 0:
-                    IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air_choose));
-                    IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat));
-                    IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media));
-                    IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance));
-
-                    IV_conditioning_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                    IV_seat_control.setBackground(null);
-                    IV_media_control.setBackground(null);
-                    IV_fragrance_control.setBackground(null);
-                    myViewPager.setCurrentItem(0);
-                    break;
-                case 1:
-                    IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air));
-                    IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat_choose));
-                    IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media));
-                    IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance));
-
-                    IV_conditioning_control.setBackground(null);
-                    IV_seat_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                    IV_media_control.setBackground(null);
-                    IV_fragrance_control.setBackground(null);
-                    myViewPager.setCurrentItem(1);
-                    break;
-                case 2:
-                    IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air));
-                    IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat));
-                    IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media_choose));
-                    IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance));
-
-                    IV_conditioning_control.setBackground(null);
-                    IV_seat_control.setBackground(null);
-                    IV_media_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                    IV_fragrance_control.setBackground(null);
-                    myViewPager.setCurrentItem(2);
-                    break;
-                case 3:
-                    IV_conditioning_control.setImageDrawable(getDrawable(R.mipmap.icon_air));
-                    IV_seat_control.setImageDrawable(getDrawable(R.mipmap.icon_seat));
-                    IV_media_control.setImageDrawable(getDrawable(R.mipmap.icon_media));
-                    IV_fragrance_control.setImageDrawable(getDrawable(R.mipmap.icon_fragrance_choose));
-
-                    IV_conditioning_control.setBackground(null);
-                    IV_seat_control.setBackground(null);
-                    IV_media_control.setBackground(null);
-                    IV_fragrance_control.setBackground(getDrawable(R.mipmap.bg_tab_choose));
-                    myViewPager.setCurrentItem(3);
-                    break;
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (! Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivityForResult(intent,10);
             }
         }
 
-        @Override
-        public void onPageScrolled(int i, float v, int i1) {
+        btnMajorTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"you clicked major screen", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-        }
-
-        @Override
-        public void onPageScrollStateChanged(int i) {
-
-        }
+        DisplayManager manager = (DisplayManager) getSystemService(Context.DISPLAY_SERVICE);
+        Display[] displays = manager.getDisplays();
+        // displays[0] 主屏
+        // displays[1] 副屏
+        DifferentDislay differentDislay = new DifferentDislay(this,displays[1]);
+        differentDislay.getWindow().setType(
+                WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY);
+        //DifferentDislay.myViewPager.addOnPageChangeListener(new DifferentDislay(DifferentDislay.mcontext,displays[1]).MyPageChangeListener());
+        differentDislay.show();
     }
-
+/*
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 10) {
+            if (Build.VERSION.SDK_INT >= 23) {
+                if (!Settings.canDrawOverlays(this)) {
+                    // SYSTEM_ALERT_WINDOW permission not granted...
+                    Toast.makeText(LoginActivity.this,"not granted",Toast.LENGTH_SHORT);
+                }
+            }
+        }
+*/
 }
