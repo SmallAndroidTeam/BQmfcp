@@ -7,9 +7,7 @@
         android:id="@+id/pic_fragrance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="104px"
+        android:layout_marginLeft="104px"
         android:layout_marginTop="177px"
         android:src="@mipmap/pic_fragrance" />
 
@@ -17,10 +15,8 @@
         android:id="@+id/iv_bg_choose_yhhy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="488px"
-        android:layout_marginTop="142px"
+        android:layout_marginLeft="508px"
+        android:layout_marginTop="162px"
         android:visibility="invisible"
         android:background="@mipmap/bg_choose"/>
 
@@ -30,8 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="140dp"
-        android:layout_marginTop="142px"
+        android:layout_marginEnd="370px"
+        android:layout_marginTop="162px"
         android:visibility="invisible"
         android:background="@mipmap/bg_choose"/>
 
@@ -41,8 +37,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="20px"
-        android:layout_marginTop="142px"
+        android:layout_marginEnd="85px"
+        android:layout_marginTop="162px"
         android:visibility="invisible"
         android:background="@mipmap/bg_choose" />
 
@@ -51,8 +47,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="184px"
         android:layout_marginStart="530px"
+        android:layout_marginTop="184px"
         android:background="@mipmap/pic_fragrance_yhhy_disable" />
 
     <ImageButton
@@ -61,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/pic_fragrance_yhhy_disable"
-        android:layout_marginLeft="786px"
+        android:layout_marginLeft="806px"
         android:background="@mipmap/pic_fragrance_jdss_disable" />
 
     <ImageButton
@@ -70,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/pic_fragrance_yhhy_disable"
-        android:layout_marginEnd="60px"
+        android:layout_marginEnd="105px"
         android:background="@mipmap/pic_fragrance_mlcs_disable" />
 
 
@@ -84,13 +80,7 @@
         android:layout_marginTop="338px"
         android:src="@mipmap/bg_line_fragrance" />
 
-    <ImageView
-        android:id="@+id/bg_deep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="682px"
-        android:layout_marginTop="584px"
-        android:background="@mipmap/bg_deep" />
+
 
 
 
@@ -100,10 +90,8 @@
         android:id="@+id/tv_fragrance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="136px"
-        android:layout_marginStart="160px"
+        android:layout_marginLeft="100px"
+        android:layout_marginTop="400px"
         android:text="香氛"
         android:textSize="48px"
         android:textColor="#FFFFFF"/>
@@ -114,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/pic_fragrance"
-        android:layout_marginStart="560px"
+        android:layout_marginStart="500px"
         android:text="雨后花园"
         android:textColor="#698A9C"
         android:textSize="36px"/>
@@ -125,7 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/pic_fragrance"
-        android:layout_marginEnd="354px"
+        android:layout_marginEnd="370px"
         android:text="绝对绅士"
         android:textColor="#698A9C"
         android:textSize="36px"/>
@@ -147,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tv_fragrance"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="186dp"
+        android:layout_marginEnd="370px"
         android:text="温馨提示"
         android:textColor="#698A9C"
         android:textSize="26px" />
@@ -158,7 +146,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/warning1"
-        android:layout_marginEnd="142dp"
+        android:layout_marginEnd="270px"
         android:text="香味不足时，请检查香氛余量"
         android:textColor="#698A9C"
         android:textSize="26px" />
@@ -182,52 +170,36 @@
     <!--android:text="高"-->
     <!--android:textSize="25dp"/>-->
 
+    <ImageView
+        android:id="@+id/bg_deep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="682px"
+        android:layout_marginTop="584px"
+        android:background="@mipmap/bg_deep" />
+
     <Button
         android:id="@+id/btn_high"
-        android:layout_width="88dp"
-        android:layout_height="45dp"
-        android:layout_alignBottom="@+id/bg_deep"
-        android:layout_alignStart="@+id/pic_fragrance_jdss_disable"
-        android:layout_alignTop="@+id/bg_deep"
-        android:layout_marginStart="48dp"
-        android:layout_toStartOf="@+id/pic_fragrance_mlcs_disable"
+        android:layout_width="116dp"
+        android:layout_height="85px"
+        android:layout_alignEnd="@+id/bg_deep"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-28dp"
         android:background="@drawable/button_frame"
         android:text="高"
         android:textSize="36px" />
 
     <Button
         android:id="@+id/btn_low"
-        android:layout_width="89dp"
-        android:layout_height="45dp"
-        android:layout_alignBottom="@+id/bg_deep"
-        android:layout_alignStart="@+id/pic_fragrance_jdss_disable"
-        android:layout_alignTop="@+id/bg_deep"
-        android:layout_marginEnd="89dp"
-        android:layout_marginStart="-82px"
-        android:layout_toStartOf="@+id/pic_fragrance_mlcs_disable"
+        android:layout_width="116dp"
+        android:layout_height="85px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/bg_deep"
         android:background="@mipmap/bg_deep"
         android:text="低"
         android:textSize="36px" />
 
-    <!--<ImageButton-->
-    <!--android:id="@+id/ib_low"-->
-    <!--android:layout_width="88dp"-->
-    <!--android:layout_height="45dp"-->
-    <!--android:layout_alignStart="@+id/bg_deep"-->
-    <!--android:layout_alignTop="@+id/bg_deep"-->
-    <!--android:background="@drawable/button_frame"-->
-    <!--android:visibility="invisible"/>-->
 
-    <!--<TextView-->
-    <!--android:id="@+id/tv_low"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:layout_alignParentEnd="true"-->
-    <!--android:layout_marginBottom="25dp"-->
-    <!--android:layout_marginEnd="228dp"-->
-    <!--android:text="低"-->
-    <!--android:textSize="25dp"/>-->
 
     <Button
         android:id="@+id/btn_fragrance_openorclose"

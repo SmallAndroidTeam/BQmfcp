@@ -107,7 +107,7 @@ public class SeatControlFragment extends Fragment implements View.OnClickListene
      */
     private void setSeatControInitlPosition(double offsetX,double offsetY) {//根据offsetX，offsetY来设置icon_adjust的位置
         double X=160;
-        double Y=323;
+        double Y=515;
         //160 323 1120 323
         Log.i("jfKSDJF", "setSeatControInitlPosition: "+X+"//"+Y);
       RelativeLayout.LayoutParams layoutParams= (RelativeLayout.LayoutParams) icon_adjust.getLayoutParams();
@@ -122,7 +122,7 @@ public class SeatControlFragment extends Fragment implements View.OnClickListene
 
     private void setSeatControInitlPosition2(double offsetX,double offsetY) {//根据offsetX，offsetY来设置icon_adjust的位置
         double X=160;
-        double Y=323;
+        double Y=515;
         //160 323 1120 323
         Log.i("jfKSDJF", "setSeatControInitlPosition: "+X+"//"+Y);
         //RelativeLayout.LayoutParams layoutParams= (RelativeLayout.LayoutParams) icon_adjust.getLayoutParams();
@@ -231,6 +231,8 @@ return -(angle-rotation_angle)/rotation_angle*MAX_ROTATION_ANGLE;
         icon_adjust2.setOnTouchListener(touchListener_right);
         icon_plus_choose.setOnClickListener(this);
         iconMinusChoose.setOnClickListener(this);
+        icon_plus_choose2.setOnClickListener(this);
+        iconMinusChoose2.setOnClickListener(this);
     }
     public View.OnTouchListener touchListener_left = new View.OnTouchListener() {
         @Override
@@ -456,7 +458,10 @@ return -(angle-rotation_angle)/rotation_angle*MAX_ROTATION_ANGLE;
                     setSeatControlPosition((float)( -1.0*Arc_R*Math.abs(Math.cos(seatControlAngle-controlAngle)-Math.cos(seatControlAngle))));
                     changeSeatControlAngle((float)( -1.0*Arc_R*Math.abs(Math.cos(seatControlAngle-controlAngle)-Math.cos(seatControlAngle))));
                 }
-
+                break;
+            case R.id.icon_plus_choose2:
+                break;
+            case R.id.icon_minus_choose2:
                 break;
         }
     }

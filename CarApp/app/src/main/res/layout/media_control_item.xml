@@ -5,11 +5,10 @@
 
     <ImageView
         android:id="@+id/lv_bg_media"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="354px"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="350px"
+        android:scaleType="fitXY"
+        android:layout_marginTop="300px"
         android:src="@mipmap/bg_media" />
 
     <ImageView
@@ -17,43 +16,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="167px"
-        android:layout_marginLeft="369px"
+        android:layout_marginTop="100px"
+        android:layout_marginLeft="480px"
         android:src="@mipmap/pic_sound" />
 
     <ImageButton
         android:id="@+id/ib_sound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="30px"
+        android:layout_height="30px"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="168px"
-        android:layout_marginTop="270px"
+        android:layout_marginStart="300px"
+        android:layout_marginTop="180px"
         android:background="@mipmap/icon_max" />
 
     <SeekBar
         android:id="@+id/sb_sound"
-        android:layout_width="434dp"
-        android:layout_height="39dp"
+        android:layout_width="600px"
+        android:layout_height="90px"
         android:layout_alignTop="@+id/ib_sound"
-        android:layout_marginTop="-20px"
+        android:layout_marginTop="-27dp"
         android:layout_toEndOf="@+id/ib_sound" />
 
     <TextView
         android:id="@+id/tv_sound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ib_sound"
+        android:layout_marginTop="140px"
         android:layout_toEndOf="@+id/sb_sound"
-        android:text="0" />
+        android:text="0"
+        android:textSize="72px"
+        android:textColor="#BFF6FF" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="270dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginLeft="590px"
+        android:layout_marginBottom="100px">
         <com.of.mfcp.bq.DefineView.WheelView
             android:id="@+id/wv_equalizer"
             android:layout_width="wrap_content"
